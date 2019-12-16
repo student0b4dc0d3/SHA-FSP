@@ -1,0 +1,371 @@
+
+/*
+        SHA-FSP/pt_01_HTML_CSS/w_03-Homework
+
+        BIG QUESTION
+
+        How would you create with bootstrap a section on a page with following behavior:
+            on viewports   with max-width up to     479 pixels  a single column of data is shown
+            on viewports   with min-width at least  480 pixels  2 columns of data are shown side by side
+            on viewports   with min-width at least  768 pixels  3 columns of data are shown side by side
+            on viewports   with min-width at least  992 pixels  4 columns of data are shown side by side
+            on viewports   with min-width at least 1200 pixels  5 columns of data are shown side by side
+
+        I cannot see how to do that with bootstrap, since Bootstrap media responsiveness is facilitated
+        from within the HTML , and my only known way to alter HTML tags (not style) is through javascript.
+
+        Alternative, it seems possible to create that behavior using CSS media queries and HTML column elements
+        since my page's responsiveness is facilitated through media queries in the CSS file.
+
+*/
+
+.cls_css_text_align_left {
+    text-align: left;
+}
+
+.cls_css_text_align_right {
+    text-align: right;
+}
+
+.cls_css_text_align_center {
+    text-align: center;
+}
+
+.cls_css_reset_margin_padding {
+    margin: 0px;
+    padding: 0px;
+}
+
+.cls_css_margin_top_30 {
+    margin-top: 30px;
+}
+
+.cls_css_padding_12 {
+    padding: 12px;
+}
+
+a {
+    color: #01689b;
+}
+
+.cls_css_text_bold {
+    font-weight: bold;
+}
+
+#id_logo_image_box {
+    /*
+        small logo image url
+            https://www.rijksoverheid.nl/binaries/content/gallery/rijksoverheid/channel-afbeeldingen/logos/logo-fallback-ro.svg
+        large logo image
+            https://www.rijksoverheid.nl/binaries/content/gallery/rijksoverheid/channel-afbeeldingen/logos/logo-ro.svg
+        */
+    margin: 0px;
+    padding: 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#id_page_navbar {
+    /*
+        bootstrap navbar color & background-color customization does not work:
+            lookup how to customize bootstrap navbar colors
+            ~/Documents/SHA/TEMP/HTML+CSS/TEST 03 - CUSTOM BOOTSTRAP NAVBAR/index.html
+        */
+    background-color: #01689b;
+    /*  */
+    font-size: 120%;
+}
+
+#id_image_search_group {
+    /*
+        background-image: url("https://www.rijksoverheid.nl/binaries/large/content/gallery/rijksoverheid/attentie-afbeeldingen/onderwerpen/a/antibioticaresistentie-hero.jpg");
+        background-image: url("");
+        https://www.rijksoverheid.nl/binaries/medium/content/gallery/rijksoverheid/attentie-afbeeldingen/home/2019/oliebollenkraam-wab.jpg
+        https://www.rijksoverheid.nl/binaries/large/content/gallery/rijksoverheid/attentie-afbeeldingen/home/2019/oliebollenkraam-wab.jpg
+        https://www.rijksoverheid.nl/binaries/widescreen/content/gallery/rijksoverheid/attentie-afbeeldingen/home/2019/oliebollenkraam-wab.jpg
+        https://www.rijksoverheid.nl/binaries/large/content/gallery/rijksoverheid/attentie-afbeeldingen/home/2019/oliebollenkraam-wab.jpg
+        */
+    background-image: url("https://www.rijksoverheid.nl/binaries/medium/content/gallery/rijksoverheid/attentie-afbeeldingen/home/2019/oliebollenkraam-wab.jpg");
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 28px 15px 14px 14px;
+}
+
+#id_lean_search_box {
+    padding: 0px 15px 14px 14px;
+    background-color: #01689b;
+}
+
+#id_lean_search_element , #id_wide_search_element {
+    padding: 8px 12px;
+    color: black;
+    font-size: 125%;
+    background-color: white;
+}
+
+#id_image_quicklink_box {
+    padding: 17px 12px 14px 14px;
+    color: black;
+    background-color: white;
+}
+
+#id_image_quicklink_box ul {
+    padding: 0px 0px 0px 18px;
+    list-style-type: circle;
+}
+
+#id_image_quicklink_box li {
+    padding: 4px 0px;
+    font-weight: bold;
+}
+
+.cls_css_copyright {
+    color: silver;
+    font-size: 90%;
+    padding-top: 0.9em;
+}
+
+
+
+.cls_css_content_area_1_content h3 {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.cls_css_content_area_1_content p {
+    color: black;
+    font-size: 1em;
+}
+
+.cls_css_content_area_2_content h3 {
+    margin-top: 14px;
+    font-size: 1.6em;
+}
+
+.cls_css_content_area_2_content p {
+    color: black;
+    font-size: 0.95em;
+}
+
+.cls_css_content_area_2_content img {
+    width: 99%;
+}
+
+.cls_css_content_area_3_content h3 {
+    font-size: 1.6em;
+}
+
+.cls_css_content_area_3_content span {
+    color: black;
+    font-size: 0.95em;
+    font-weight: bold;
+}
+
+.cls_css_content_area_3_content p {
+    margin-top: 12px;
+    color: black;
+    font-size: 0.95em;
+}
+
+.cls_css_content_area_4_content {
+    border: 3px solid silver;
+    height: 210px;
+}
+
+.cls_css_content_area_4_content h1 {
+    color: #01689b;
+    padding-top: 12px;
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+.cls_css_content_area_4_content h2 {
+    color: black;
+    font-size: 1.6em;
+}
+
+.cls_css_content_area_4_content h3 {
+    color: #01689b;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.cls_css_content_area_4_content h4 {
+    color: black;
+    padding: 30px 0px;
+    font-size: 1.6em;
+}
+
+.cls_css_content_area_4_content h5 {
+    color: maroon;
+    padding: 0px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+#id_page_footer_area_1 {
+    background-color: #01689b;
+    color: white;
+    padding: 30px 0px 10px 0px;
+}
+
+.cls_css_flex_item_fold_0_768_1stcol h2 {
+    font-size: 1.45em;
+    font-style: italic;
+}
+
+.cls_css_flex_item_fold_0_768_others h3 {
+    padding-top: 3px;
+    font-size: 1.25em;
+}
+
+.cls_css_flex_item_fold_0_768_others ul {
+    /*    padding: 0px 0px 0px 18px;    */
+    padding: 0px;
+    font-size: 0.95em;
+    list-style-type: none;
+}
+
+.cls_css_flex_item_fold_0_768_others li {
+    padding: 1px 0px;
+}
+
+.cls_css_flex_item_fold_0_768_others a {
+    color: white;
+}
+
+
+/*
+    managing folding column responsiveness with media queries
+*/
+
+#id_page_content_area_1 , #id_page_content_area_2 , #id_page_content_area_3
+                        , #id_page_content_area_4 , #id_page_footer_area_1  {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.cls_css_flex_item_fold_0_768_992_1200 , .cls_css_flex_item_fold_0_480_992 ,
+.cls_css_flex_item_fold_0_768_1stcol   , .cls_css_flex_item_fold_0_768_others {
+    margin: 0px;
+    padding: 12px;
+}
+
+/*  tiny viewports   with max-width up to     479 pixels  */
+@media screen and (max-width: 479px) {
+    #id_logo_image_box {
+        background-image: url("https://www.rijksoverheid.nl/binaries/content/gallery/rijksoverheid/channel-afbeeldingen/logos/logo-fallback-ro.svg");
+        height: 70px;
+        margin-left: 71px;
+    }
+    #id_page_navbar {
+        padding: 8px 14px;
+    }
+    #id_lean_search_box {
+        display: block;
+    }
+    #id_wide_search_box {
+        display: none;
+    }
+    #id_image_quicklink_box {
+        display: block;
+    }
+    .cls_css_flex_item_fold_0_768_992_1200 {
+        width: 96.1%;
+    }
+    .cls_css_flex_item_fold_0_480_992 {
+        width: 96.1%;
+    }
+    .cls_css_flex_item_fold_0_768_1stcol {
+        width: 96.1%;
+    }
+    .cls_css_flex_item_fold_0_768_others {
+        width: 46.2%;
+    }
+}
+
+/*  small viewports  with min-width at least  480 pixels  */
+@media screen and (min-width: 480px) {
+    #id_logo_image_box {
+        background-image: url("https://www.rijksoverheid.nl/binaries/content/gallery/rijksoverheid/channel-afbeeldingen/logos/logo-fallback-ro.svg");
+        height: 70px;
+        margin-left: 71px;
+    }
+    #id_page_navbar {
+        padding: 8px 14px;
+    }
+    #id_lean_search_box {
+        display: block;
+    }
+    #id_wide_search_box {
+        display: none;
+    }
+    #id_image_quicklink_box {
+        display: block;
+    }
+    .cls_css_flex_item_fold_0_768_992_1200 {
+        width: 96.4%;
+    }
+    .cls_css_flex_item_fold_0_480_992 {
+        width: 46.2%;
+    }
+    .cls_css_flex_item_fold_0_768_1stcol {
+        width: 96.1%;
+    }
+    .cls_css_flex_item_fold_0_768_others {
+        width: 46.2%;
+    }
+}
+
+/*  medium viewports with min-width at least  768 pixels  */
+@media screen and (min-width: 768px) {
+    #id_logo_image_box {
+        background-image: url("https://www.rijksoverheid.nl/binaries/content/gallery/rijksoverheid/channel-afbeeldingen/logos/logo-ro.svg");
+        height: 125px;
+        margin-left: 264px;
+    }
+    #id_page_navbar {
+        padding: 14px 15px 13px;
+    }
+    #id_lean_search_box {
+        display: none;
+    }
+    #id_wide_search_box {
+        display: inline-block;
+    }
+    #id_image_quicklink_box {
+        display: inline-block;
+    }
+    .cls_css_flex_item_fold_0_768_992_1200 {
+        width: 46.2%;
+    }
+    .cls_css_flex_item_fold_0_768_1stcol {
+        width: 46.2%;
+    }
+    .cls_css_flex_item_fold_0_768_others {
+        width: 22.4%;
+    }
+}
+
+/*  large viewports  with min-width at least  992 pixels  */
+@media screen and (min-width: 992px) {
+    .cls_css_flex_item_fold_0_768_992_1200 {
+        width: 30.4%;
+    }
+    .cls_css_flex_item_fold_0_480_992 {
+        width: 30.4%;
+    }
+}
+
+/*  xlarge viewports with min-width at least 1200 pixels  */
+@media screen and (min-width: 1200px) {
+    .cls_css_flex_item_fold_0_768_992_1200 {
+        width: 22.4%;
+    }
+}
