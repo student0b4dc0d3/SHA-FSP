@@ -1,2 +1,4 @@
 # SHA-FSP
-Studies - SHA-FSP - Homework
+
+Root of SHA-FSP Studies - Homework folder
+
